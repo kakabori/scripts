@@ -1,6 +1,6 @@
 '''documentation'''
 
-import sys, os
+import sys, os, shutil
 
 def read_header(f):
     '''Read the first line of .sim file, which should be the headers separated
@@ -44,7 +44,7 @@ def clean_up_header(name):
         print(line, file=fw, end='')
     fw.close()
     
-    os.rename("tmp.sim", name)
+    shutil.copyfile("tmp.sim", name)
     
 
 def main():
