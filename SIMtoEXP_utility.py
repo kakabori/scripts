@@ -44,7 +44,7 @@ def clean_up_header(name):
         print(line, file=fw, end='')
     fw.close()
     
-    shutil.copyfile("tmp.sim", name)
+    shutil.move("tmp.sim", name)
     
 
 def main():
